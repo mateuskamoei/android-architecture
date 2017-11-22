@@ -42,7 +42,9 @@ import android.widget.TextView;
 import com.example.android.architecture.blueprints.todoapp.R;
 import com.example.android.architecture.blueprints.todoapp.addedittask.AddEditTaskActivity;
 import com.example.android.architecture.blueprints.todoapp.data.Task;
+import com.example.android.architecture.blueprints.todoapp.login.LoginActivity;
 import com.example.android.architecture.blueprints.todoapp.taskdetail.TaskDetailActivity;
+import com.facebook.login.LoginManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -170,6 +172,12 @@ public class TasksFragment extends Fragment implements TasksContract.View {
                 break;
             case R.id.menu_refresh:
                 mPresenter.loadTasks(true);
+                break;
+            case R.id.menu_logout: // Logs out from Facebook
+                LoginManager.getInstance().logOut();
+                Intent goToLoginIntent = new Intent(this.getActivity(), LoginActivity.class);
+                this.getActivity().startActivity(goToLoginIntent);
+                this.getActivity().finish(); // Finishes the TasksActivity to prevent user from going back to it
                 break;
         }
         return true;

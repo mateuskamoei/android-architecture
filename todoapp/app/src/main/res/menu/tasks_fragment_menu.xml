@@ -29,4 +29,9 @@
         android:id="@+id/menu_refresh"
         android:title="@string/refresh"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_logout"
+        android:title="@string/logout"
+        app:showAsAction="never" />
 </menu>

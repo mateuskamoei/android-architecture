@@ -56,4 +56,7 @@
     <string name="no_tasks_add">Add a TO-DO item +</string>
     <string name="refresh">Refresh</string>
 
+    <string name="facebook_app_id">192992394608651</string>
+    <string name="fb_login_protocol_scheme">fb192992394608651</string>
+    <string name="logout">Logout</string>
 </resources>
